@@ -1,4 +1,3 @@
-# db/user_utils.py
 import sqlite3
 
 def create_users_table():

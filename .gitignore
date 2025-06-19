@@ -4,7 +4,7 @@ __pycache__/
 *.pyo
 
 # Environment files
-.env
+secrets.toml
 
 # Local databases
 entries.db

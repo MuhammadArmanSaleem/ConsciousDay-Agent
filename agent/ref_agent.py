@@ -1,17 +1,15 @@
 from langchain_together import ChatTogether
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
+import streamlit as st
 import re
-import os
-from dotenv import load_dotenv
-load_dotenv()
 
 # Use Together's OpenAI-compatible endpoint
 
 llm = ChatTogether(
     model="mistralai/Mixtral-8x7B-Instruct-v0.1",
     temperature=0.7,
-    together_api_key=os.getenv("TOGETHER_API_KEY")
+    together_api_key=st.secrets["TOGETHER_API_KEY"]
 )
 
 prompt_template = PromptTemplate(
